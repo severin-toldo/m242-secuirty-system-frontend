@@ -1,0 +1,51 @@
+{
+  "GENERAL": {
+    "APP_TITLE": "Sicherheitssystem",
+    "UNKNOWN_ERROR": "Ein unbekannter Fehler ist aufgetreten.",
+    "ERROR": "Fehler!",
+    "SUCCESS": "Erfolgreich!",
+    "ADD": "Hinzufügen",
+    "SAVE": "Speichern",
+    "NO_DATA": "Keine Daten verfügbar."
+  },
+  "HTTP_STATUS_CODE": {
+    "200": "Ok",
+    "201": "Created",
+    "400": "Bad Request",
+    "401": "Unauthorized",
+    "403": "Forbidden",
+    "404": "Not Found",
+    "405": "Method Not Allowed",
+    "500": " Internal Server Error"
+  },
+  "ERROR_CODE": {
+    "E1000": "Ein unbekannter Fehler ist aufgetreten.",
+    "E1001": "JSON konnte nicht geparsed werden!",
+    "E1002": "Altes und Neues Passwort stimmen nicht überein.",
+    "E1003": "Kategorie kann nicht gelöscht werden, da diese noch in Zeit Einträgen verwendet wird.",
+    "E1004": "User kann nicht gelöscht werden, da dieser noch in Zeit Einträgen verwendet wird.",
+    "E1005": "Sitzung abgelaufen. Bitte melden Sie sich erneut an.",
+    "E1006": "Eintrag nicht gefunden.",
+    "E1007": "E-Mail oder Passwort ungültig.",
+    "E1008": "Ungülite E-Mail.",
+    "E1009": "Check-Out kann nicht vor Check-In sein."
+  },
+  "NAV": {
+    "PROFILE": "Profil",
+    "LOGOUT": "Abmelden",
+    "NAV_LINKS": {
+      "DASHBOARD": "Dashboard",
+      "RECORD": "Erfassen",
+      "SUPERVISE": "Visieren"
+    }
+  },
+  "LOGIN": {
+    "LOGIN": "Anmelden",
+    "LOGOUT": "Abmelden",
+    "EMAIL": "E-Mail",
+    "PASSWORD": "Passwort",
+    "WRONG_CREDENTIALS": "Email oder Passwort ist falsch."
+  },
+  "INTERCOM": {
+  }
+}

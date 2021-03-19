@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "m242-secuirty-system-frontend"
+    }
+  },
+  "defaultProject": "m242-secuirty-system-frontend",
+  "cli": {
+    "analytics": false
+  }
 }

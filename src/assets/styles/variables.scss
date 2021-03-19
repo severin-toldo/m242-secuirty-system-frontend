@@ -1,0 +1,10 @@
+@import '~bootstrap/scss/bootstrap';
+
+$primary: #5cb85c;
+$primaryDark: darken($primary, 10);
+$secondaryDark: darken($secondary, 10);
+$secondaryLight: lighten($secondary, 30);
+
+$theme-colors: (
+  "primary": $primary,
+);

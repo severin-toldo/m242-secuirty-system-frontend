@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+/* import library styles */
+@import '~ngx-toastr/toastr.css';
+
+/* overwrite certain bootstrap styles */
+@import 'assets/styles/styles.module';
+
+/* import other bootstrap styles */
+@import '~bootstrap/scss/bootstrap';

@@ -1,0 +1,15 @@
+.rounded-pill {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.btn-link {
+  outline: none !important;
+  box-shadow: none !important;
+  color: $secondary !important;
+  text-decoration: none !important;
+}
+
+.btn-link:hover {
+  color: $primary !important;
+}
