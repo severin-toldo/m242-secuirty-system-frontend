@@ -10,6 +10,7 @@ import {
 } from '../shared/urls';
 import {SecuritySystem} from "../model/security-system.model";
 import {SecuritySystemFinishPairRequest} from "../model/api/security-system-finish-pair-request.model";
+import {SecuritySystemHistory} from "../model/security-system-history.model";
 
 
 @Injectable({
@@ -32,8 +33,8 @@ export class SecuritySystemService {
     return this.http.delete(deleteSecuritySystemByIdUrl(id), {observe: 'response'});
   }
 
-  public getHistory(securitySystemId: number): Observable<SecuritySystem[]> {
-    return this.http.get<SecuritySystem[]>(getSecuritySystemHistoryUrl(securitySystemId));
+  public getHistory(securitySystemId: number): Observable<SecuritySystemHistory[]> {
+    return this.http.get<SecuritySystemHistory[]>(getSecuritySystemHistoryUrl(securitySystemId));
   }
 
   public finishPairing(request: SecuritySystemFinishPairRequest): Observable<any> {

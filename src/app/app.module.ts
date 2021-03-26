@@ -18,6 +18,8 @@ import { DashboardComponent } from './intercom/dashboard/dashboard.component';
 import {NavComponent} from "./layout/nav/nav.component";
 import {FeatherModule} from "angular-feather";
 import {Delete, LogOut, Video} from "angular-feather/icons";
+import { SecuritySystemComponent } from './intercom/security-system/security-system.component';
+import { PairingComponent } from './intercom/pairing/pairing.component';
 
 
 export function httpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -36,6 +38,8 @@ const icons = {
     LoginComponent,
     DashboardComponent,
     NavComponent,
+    SecuritySystemComponent,
+    PairingComponent,
   ],
   imports: [
     BrowserModule,

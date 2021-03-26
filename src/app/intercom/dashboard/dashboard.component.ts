@@ -3,8 +3,9 @@ import {SecuritySystemService} from "../../service/security-system.service";
 import {Observable} from "rxjs";
 import {SecuritySystem} from "../../model/security-system.model";
 import { SecuritySystemHistoryType } from 'src/app/model/security-system-history-type.enum';
-import {dashboardRoute} from "../../shared/routes";
+import {dashboardRoute, securitySystemRoute} from "../../shared/routes";
 import {ToasterService} from "../../service/toaster.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-dashboard',
@@ -19,7 +20,8 @@ export class DashboardComponent implements OnInit {
 
 
   constructor(private securitySystemService: SecuritySystemService,
-              private toaster: ToasterService) {
+              private toaster: ToasterService,
+              private router: Router) {
   }
 
   public ngOnInit(): void {
@@ -27,6 +29,7 @@ export class DashboardComponent implements OnInit {
   }
 
   public openSecuritySystem(id: number): void {
+    this.router.navigate(securitySystemRoute(id));
   }
 
   public deleteSecuritySystem(id: number): void {

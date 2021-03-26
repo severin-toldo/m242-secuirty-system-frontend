@@ -1,0 +1,28 @@
+<div class="m-4">
+  <ng-container *ngIf="(securitySystem$ | async) as securitySystem">
+    <h1>{{ securitySystem.name }}</h1>
+    <br/>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">{{ 'INTERCOM.SECURITY_SYSTEM.DATETIME' | translate }}</th>
+          <th scope="col">{{ 'INTERCOM.SECURITY_SYSTEM.TYPE' | translate }}</th>
+          <th scope="col">{{ 'INTERCOM.SECURITY_SYSTEM.USER' | translate }}</th>
+          <th scope="col">{{ 'INTERCOM.SECURITY_SYSTEM.USER_EMAIL' | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let historyItem of (history$ | async)">
+          <td>{{ historyItem.datetime | date:'dd.MM.yyyy / hh:mm:ss' }}</td>
+          <td>{{ historyItem.type }}</td>
+          <td>{{ historyItem.user.firstname + ' ' + historyItem.user.lastname }}</td>
+          <td>{{ historyItem.user.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+  <ng-container *ngIf="!(securitySystem$ | async)">
+    <h1>{{ 'INTERCOM.SECURITY_SYSTEM.NOT_FOUND' | translate }}</h1>
+  </ng-container>
+</div>
+

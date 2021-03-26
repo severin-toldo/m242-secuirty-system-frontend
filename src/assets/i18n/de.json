@@ -49,6 +49,18 @@
   "INTERCOM": {
     "DASHBOARD": {
       "TITLE": "Sicherheitssysteme"
+    },
+    "SECURITY_SYSTEM": {
+      "TITLE": "Sicherheitssystem",
+      "NOT_FOUND": "Sicherheitssystem nicht gefunden!",
+      "DATETIME": "Datum",
+      "TYPE": "Typ",
+      "USER": "Benutzer",
+      "USER_EMAIL": "Benutzer E-Mail"
+    },
+    "PAIRING": {
+      "TITLE": "Pairing"
+
     }
   },
   "SECURITY_SYSTEM_HISTORY_TYPE": {

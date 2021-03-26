@@ -1,5 +1,3 @@
-import {User} from "../../model/user.model";
-
 export const EMPTY_VALUE = null;
 
 export function getCurrentRoute(): string {
@@ -8,8 +6,4 @@ export function getCurrentRoute(): string {
 
 export function isBlankOrEmpty(s: string): boolean {
   return (s && s.trim().length === 0) || !s;
-}
-
-export function formatUser(user: User): string {
-  return user ? user.firstName + ', ' + user.lastName : '-';
 }
