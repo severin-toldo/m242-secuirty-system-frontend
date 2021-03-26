@@ -8,3 +8,19 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+a {
+  color: black !important;
+}
+
+a:hover {
+  cursor: pointer;
+  color: $primary !important;
+}
+
+a:visited {
+  color: $primaryDark !important;
+}
+
+
+

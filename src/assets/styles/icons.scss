@@ -1,0 +1,37 @@
+@import 'src/assets/styles/variables';
+
+.icon {
+  color: $black;
+}
+
+.white-icon {
+  color: $white;
+}
+
+.primary-icon {
+  color: $primary;
+}
+
+.danger-icon {
+  color: $danger;
+}
+
+.icon:hover {
+  color: $primary;
+  cursor: pointer;
+}
+
+.white-icon:hover {
+  color: $light;
+  cursor: pointer;
+}
+
+.primary-icon:hover {
+  color: $primaryDark;
+  cursor: pointer;
+}
+
+.danger-icon:hover {
+  color: $dangerDark;
+  cursor: pointer;
+}

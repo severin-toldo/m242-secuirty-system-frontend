@@ -16,18 +16,26 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import { DashboardComponent } from './intercom/dashboard/dashboard.component';
 import {NavComponent} from "./layout/nav/nav.component";
+import {FeatherModule} from "angular-feather";
+import {Delete, LogOut, Video} from "angular-feather/icons";
 
 
 export function httpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
 }
 
+const icons = {
+  Video,
+  LogOut,
+  Delete
+};
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    NavComponent
+    NavComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +52,7 @@ export function httpLoaderFactory(http: HttpClient): TranslateHttpLoader {
         deps: [HttpClient],
       },
     }),
+    FeatherModule.pick(icons)
   ],
   providers: [
     {

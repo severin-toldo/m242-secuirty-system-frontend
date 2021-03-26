@@ -1,1 +1,18 @@
-<p>dashboard works!</p>
+<div class="m-4">
+  <h1>{{ 'INTERCOM.DASHBOARD.TITLE' | translate }}</h1>
+  <br/>
+  <ng-container *ngFor="let securitySystem of (securitySystems$ | async)">
+    <div class="card">
+      <div class="card-body">
+        <i-feather class="icon" name="video" (click)="openSecuritySystem()"></i-feather>
+        <a class="ml-5" (click)="openSecuritySystem()"><b>{{ securitySystem.name }}</b></a>
+        <p *ngIf="securitySystem.status === SecuritySystemHistoryType.ACTIVATED" class="badge badge-success ml-3">{{ 'SECURITY_SYSTEM_HISTORY_TYPE.ACTIVATED' | translate }}</p>
+        <p *ngIf="securitySystem.status === SecuritySystemHistoryType.DEACTIVATED" class="badge badge-secondary ml-3">{{ 'SECURITY_SYSTEM_HISTORY_TYPE.DEACTIVATED' | translate }}</p>
+        <p *ngIf="securitySystem.status === SecuritySystemHistoryType.ALARM" class="badge badge-danger ml-3">{{ 'SECURITY_SYSTEM_HISTORY_TYPE.ALARM' | translate }}</p>
+        <i-feather (click)="deleteSecuritySystem()" class="danger-icon float-right" name="delete"></i-feather>
+      </div>
+    </div>
+    <br/>
+  </ng-container>
+</div>
+

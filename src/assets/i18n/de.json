@@ -47,5 +47,13 @@
     "WRONG_CREDENTIALS": "Email oder Passwort ist falsch."
   },
   "INTERCOM": {
+    "DASHBOARD": {
+      "TITLE": "Sicherheitssysteme"
+    }
+  },
+  "SECURITY_SYSTEM_HISTORY_TYPE": {
+    "ACTIVATED": "Aktiviert",
+    "DEACTIVATED": "Deaktiviert",
+    "ALARM": "Alarm"
   }
 }
