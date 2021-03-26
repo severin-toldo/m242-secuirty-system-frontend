@@ -1,5 +1,8 @@
 <div class="m-4">
-  <h1>{{ 'INTERCOM.DASHBOARD.TITLE' | translate }}</h1>
+  <h1 class="d-inline">{{ 'INTERCOM.DASHBOARD.TITLE' | translate }}</h1>
+  <button class="d-inline btn btn-primary float-right" [routerLink]="['/pairing']">Sicherheitssystem hinzufügen</button>
+  <br/>
+  <br/>
   <br/>
   <ng-container *ngFor="let securitySystem of (securitySystems$ | async)">
     <div class="card">

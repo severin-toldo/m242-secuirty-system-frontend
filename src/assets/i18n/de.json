@@ -20,15 +20,10 @@
   },
   "ERROR_CODE": {
     "E1000": "Ein unbekannter Fehler ist aufgetreten.",
-    "E1001": "JSON konnte nicht geparsed werden!",
-    "E1002": "Altes und Neues Passwort stimmen nicht überein.",
-    "E1003": "Kategorie kann nicht gelöscht werden, da diese noch in Zeit Einträgen verwendet wird.",
-    "E1004": "User kann nicht gelöscht werden, da dieser noch in Zeit Einträgen verwendet wird.",
-    "E1005": "Sitzung abgelaufen. Bitte melden Sie sich erneut an.",
-    "E1006": "Eintrag nicht gefunden.",
-    "E1007": "E-Mail oder Passwort ungültig.",
-    "E1008": "Ungülite E-Mail.",
-    "E1009": "Check-Out kann nicht vor Check-In sein."
+    "E1001": "Authentifizierung fehlgeschlagen.",
+    "E1002": "Nicht gefunden.",
+    "E1004": "Falscher Paring Codes eingegeben",
+    "E1005": "E-Mail oder Passwort ist falsch."
   },
   "NAV": {
     "PROFILE": "Profil",

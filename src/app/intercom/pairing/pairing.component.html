@@ -1,6 +1,22 @@
 <div class="m-4">
   <h1>{{ 'INTERCOM.DASHBOARD.TITLE' | translate }}</h1>
   <br/>
-
+  <br/>
+  <h4>1. Knopf auf Alarmanlage drücken und warten bis Pairing-Code auf dem Display erscheint.</h4>
+  <br/>
+  <br/>
+  <h4>2. Daten eingeben.</h4>
+  <form [formGroup]="form"
+        (ngSubmit)="finishPairing()">
+    <div class="form-group">
+      <label for="name">{{ 'Name' | translate }}</label>
+      <input type="text" class="form-control" id="name" placeholder="{{ 'Name' | translate }}" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label for="code">{{ 'Pairing-Code' | translate }}</label>
+      <input type="text" class="form-control" id="code" placeholder="{{ 'Pairing-Code' | translate }}" formControlName="code">
+    </div>
+    <button type="submit" class="btn btn-primary float-right" [disabled]="!form.valid">{{ 'Pair' | translate }}</button>
+  </form>
 </div>
 

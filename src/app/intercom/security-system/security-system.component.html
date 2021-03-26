@@ -15,8 +15,8 @@
         <tr *ngFor="let historyItem of (history$ | async)">
           <td>{{ historyItem.datetime | date:'dd.MM.yyyy / hh:mm:ss' }}</td>
           <td>{{ historyItem.type }}</td>
-          <td>{{ historyItem.user.firstname + ' ' + historyItem.user.lastname }}</td>
-          <td>{{ historyItem.user.email }}</td>
+          <td *ngIf="securitySystem.status !== SecuritySystemHistoryType.ALARM">{{ historyItem.user.firstname + ' ' + historyItem.user.lastname }}</td>
+          <td *ngIf="securitySystem.status !== SecuritySystemHistoryType.ALARM">{{ historyItem.user.email }}</td>
         </tr>
       </tbody>
     </table>

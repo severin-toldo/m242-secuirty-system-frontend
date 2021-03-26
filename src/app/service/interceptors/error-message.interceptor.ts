@@ -20,6 +20,7 @@ export class ErrorMessageInterceptor implements HttpInterceptor {
       const translate = this.injector.get(TranslateService);
 
       if (error) {
+        console.log(error);
         const errorCode =  error.error && error.error.errorCode;
         const httpStatusCode = error.error && error.error.httpStatusCode ? error.error.httpStatusCode :  error.status;
 
