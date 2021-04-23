@@ -8,6 +8,7 @@ export const getSecuritySystemHistoryUrl = (securitySystemId: number) => `${base
 export const finishPairingUrl = () => `${base}/api/security-system/pair/finish`;
 export const getSecuritySystemByIdUrl = (securitySystemId: number) => `${base}/api/security-system/${securitySystemId}`;
 export const deleteSecuritySystemByIdUrl = (securitySystemId: number) => `${base}/api/security-system/${securitySystemId}`;
+export const changeSecuritySystemStatusUrl = (securitySystemId: number) => `${base}/api/security-system/${securitySystemId}/status`;
 
 
 

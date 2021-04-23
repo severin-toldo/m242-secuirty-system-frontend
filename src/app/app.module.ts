@@ -20,6 +20,7 @@ import {FeatherModule} from "angular-feather";
 import {Delete, LogOut, Video} from "angular-feather/icons";
 import { SecuritySystemComponent } from './intercom/security-system/security-system.component';
 import { PairingComponent } from './intercom/pairing/pairing.component';
+import {UiSwitchModule} from "ngx-toggle-switch";
 
 
 export function httpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -47,6 +48,7 @@ const icons = {
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    UiSwitchModule,
     ToastrModule.forRoot(),
     TranslateModule.forRoot({
       defaultLanguage: 'de',

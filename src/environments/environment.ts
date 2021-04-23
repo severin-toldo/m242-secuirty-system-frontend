@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api_base_url: 'https://m242-security-system-backend.herokuapp.com'
+  api_base_url: 'http://localhost:8080'
 };
 
 /*

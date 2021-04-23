@@ -41,4 +41,15 @@ export class DashboardComponent implements OnInit {
       });
   }
 
+  public onChangeStatus(id: number, toggleStatus: boolean): void {
+    const newStatus = toggleStatus ? SecuritySystemHistoryType.ACTIVATED : SecuritySystemHistoryType.DEACTIVATED;
+
+    this.securitySystemService.changeStatus(id, newStatus)
+      .subscribe(() => {
+        location.reload();
+      }, error => {
+        this.toaster.error(error.errorMessage);
+      });
+  }
+
 }

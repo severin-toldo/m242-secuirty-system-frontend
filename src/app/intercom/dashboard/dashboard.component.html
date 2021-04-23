@@ -7,12 +7,29 @@
   <ng-container *ngFor="let securitySystem of (securitySystems$ | async)">
     <div class="card">
       <div class="card-body">
-        <i-feather class="icon" name="video" (click)="openSecuritySystem(securitySystem.id)"></i-feather>
-        <a class="ml-5" (click)="openSecuritySystem(securitySystem.id)"><b>{{ securitySystem.name }}</b></a>
-        <p *ngIf="securitySystem.status === SecuritySystemHistoryType.ACTIVATED" class="badge badge-success ml-3">{{ 'SECURITY_SYSTEM_HISTORY_TYPE.ACTIVATED' | translate }}</p>
-        <p *ngIf="securitySystem.status === SecuritySystemHistoryType.DEACTIVATED" class="badge badge-secondary ml-3">{{ 'SECURITY_SYSTEM_HISTORY_TYPE.DEACTIVATED' | translate }}</p>
-        <p *ngIf="securitySystem.status === SecuritySystemHistoryType.ALARM" class="badge badge-danger ml-3">{{ 'SECURITY_SYSTEM_HISTORY_TYPE.ALARM' | translate }}</p>
-        <i-feather (click)="deleteSecuritySystem(securitySystem.id)" class="danger-icon float-right" name="delete"></i-feather>
+        <div class="row">
+          <div class="col-1">
+            <i-feather class="icon" name="video" (click)="openSecuritySystem(securitySystem.id)"></i-feather>
+          </div>
+          <div class="col-2">
+            <a class="" (click)="openSecuritySystem(securitySystem.id)"><b>{{ securitySystem.name }}</b></a>
+          </div>
+          <div class="col-7">
+            <p *ngIf="securitySystem.status === SecuritySystemHistoryType.ACTIVATED" class="badge badge-success">{{ 'SECURITY_SYSTEM_HISTORY_TYPE.ACTIVATED' | translate }}</p>
+            <p *ngIf="securitySystem.status === SecuritySystemHistoryType.DEACTIVATED" class="badge badge-secondary">{{ 'SECURITY_SYSTEM_HISTORY_TYPE.DEACTIVATED' | translate }}</p>
+            <p *ngIf="securitySystem.status === SecuritySystemHistoryType.ALARM" class="badge badge-danger">{{ 'SECURITY_SYSTEM_HISTORY_TYPE.ALARM' | translate }}</p>
+          </div>
+          <div class="col-2">
+            <div class="row">
+              <div class="col-6">
+                <ui-switch [checked]="securitySystem.status === SecuritySystemHistoryType.ACTIVATED" (change)="onChangeStatus(securitySystem.id, $event)" class="float-right" size="small"></ui-switch>
+              </div>
+              <div class="col-6">
+                <i-feather (click)="deleteSecuritySystem(securitySystem.id)" class="danger-icon float-left" name="delete"></i-feather>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <br/>

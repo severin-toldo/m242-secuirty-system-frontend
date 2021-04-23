@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {
+  changeSecuritySystemStatusUrl,
   deleteSecuritySystemByIdUrl,
   finishPairingUrl,
   getAllSecuritySystemsUrl,
@@ -11,6 +12,7 @@ import {
 import {SecuritySystem} from "../model/security-system.model";
 import {SecuritySystemFinishPairRequest} from "../model/api/security-system-finish-pair-request.model";
 import {SecuritySystemHistory} from "../model/security-system-history.model";
+import {SecuritySystemHistoryType} from "../model/security-system-history-type.enum";
 
 
 @Injectable({
@@ -39,5 +41,9 @@ export class SecuritySystemService {
 
   public finishPairing(request: SecuritySystemFinishPairRequest): Observable<any> {
     return this.http.post(finishPairingUrl(), request, {observe: 'response'});
+  }
+
+  public changeStatus(securitySystemId: number, status: SecuritySystemHistoryType): Observable<any> {
+    return this.http.post(changeSecuritySystemStatusUrl(securitySystemId), {status}, {observe: 'response'});
   }
 }
